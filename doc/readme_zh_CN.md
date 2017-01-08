@@ -2,7 +2,7 @@
 
 EasyEE Auto 是针对 [EasyEE 开源 JavaEE 企业级快速开发平台](https://github.com/ushelp/EasyEE) 的自动化代码生成器。基于实体规则配置，能够一键快速生成可直接工作的模型，控制器，视图代码。
 
-Least version: `1.2.0-RELEASE` (`EasyEE 4.1.X`)
+Least version: `1.2.1-RELEASE` (`EasyEE 4.1.X`)
 
 
 ## 代码生成支持
@@ -25,7 +25,7 @@ Least version: `1.2.0-RELEASE` (`EasyEE 4.1.X`)
 <dependency>
   <groupId>cn.easyproject</groupId>
   <artifactId>easyee-auto</artifactId>
-  <version>1.2.0-RELEASE</version>
+  <version>1.2.1-RELEASE</version>
 </dependency>
 ```
 

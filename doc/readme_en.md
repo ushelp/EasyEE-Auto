@@ -2,7 +2,7 @@
 
 EasyEE Auto is an automated code generator for the [EasyEE Open Source JavaEE Enterprise Rapid Development Platform] (https://github.com/ushelp/EasyEE). Based on the entity rules configuration, can be a key to quickly generate a direct working model, controller, view code.
 
-Least version: `1.2.0-RELEASE` (`EasyEE 4.1.X`)
+Least version: `1.2.1-RELEASE` (`EasyEE 4.1.X`)
 
 
 
@@ -28,7 +28,7 @@ Provides code and view generation for five types of projects.
 <dependency>
   <groupId>cn.easyproject</groupId>
   <artifactId>easyee-auto</artifactId>
-  <version>1.2.0-RELEASE</version>
+  <version>1.2.1-RELEASE</version>
 </dependency>
 ```
 
