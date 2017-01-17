@@ -2,7 +2,7 @@
 
 EasyEE Auto 是针对 [EasyEE 开源 JavaEE 企业级快速开发平台](https://github.com/ushelp/EasyEE) 的自动化代码生成器。基于实体规则配置，能够一键快速生成可直接工作的模型，控制器，视图代码。
 
-Least version: `1.2.1-RELEASE` (`EasyEE 4.1.X`)
+Least version: `1.3.1-RELEASE` (`EasyEE 4.2.X`)
 
 
 ## 代码生成支持
@@ -25,7 +25,7 @@ Least version: `1.2.1-RELEASE` (`EasyEE 4.1.X`)
 <dependency>
   <groupId>cn.easyproject</groupId>
   <artifactId>easyee-auto</artifactId>
-  <version>1.2.1-RELEASE</version>
+  <version>1.3.1-RELEASE</version>
 </dependency>
 ```
 
@@ -39,7 +39,7 @@ EasyEE Auto 生成的模型和控制器代码都会在模块包下(`yourmodule`)
 
 `<>`: 自动生成
 
-`[]`: 可选
+`[]`: 可选生成
 
 ```
 cn.easyproject.easyee.xxx
@@ -120,14 +120,39 @@ cn.easyproject.easyee.xxx
 	
 	`SSHCodeGenerator.java`: **Spring + Struts2 + Hibernate(JPA)**
 
-- 方法
+- 核心方法
 
 	```JAVA
-	// Generate all the classes under the entity package
+
+	/**
+	 * 为指定包下的所有实体类生成模块代码
+	 * 
+	 * @param entityPackage 包完全限定名
+	 */
 	generator(String entityPackage)
 	
-	// Generates the specified class
+	/**
+	 * 为指定包下的所有实体类生成特定模块代码
+	 * 
+	 * @param modules 生成模块枚举数组
+	 * @param entityPackage 包完全限定名
+	 */
+	generator(EasyAutoModule[] modules, String entityPackage)
+	
+	/**
+	 * 为指定类生成模块代码
+	 * 
+	 * @param entity 类列表
+	 */
 	generator(Class... entity)
+	
+	/**
+	 * 为指定类生成模块代码
+	 * 
+	 * @param modules 生成模块枚举数组
+	 * @param entity 类列表
+	 */
+	generator(EasyAutoModule[] modules, Class... entity)
 	```
 
 - 示例
@@ -148,6 +173,23 @@ cn.easyproject.easyee.xxx
 			
 		}
 	}
+	```
+	
+- 生成模块选择：
+	
+	可通过枚举数组，指定具体生成的模块。
+	
+	```JAVA
+	// Generator all modules, you can choice
+	new SMCodeGenerator().generator(new EasyAutoModule[]{
+				EasyAutoModule.CONTROLLER_CLASS, // Controller/Action 控制器类
+				EasyAutoModule.CRITERIA_CLASS, // Criteria
+				EasyAutoModule.MYBATIS_DAO_INTERFACE, // MyBatis DAO interface
+				EasyAutoModule.MYBATIS_MAPPER_XML, // MyBatis mapper.xml
+				EasyAutoModule.PAGE, // View page
+				EasyAutoModule.SERVICE_INTERFACE, // Service interface
+				EasyAutoModule.SERVICE_IMPLEMENTS // Server implements
+		},entityPackage);
 	```
 
 
@@ -206,6 +248,12 @@ cn.easyproject.easyee.xxx
  * @return 生成的显示名
  */
 String label() default "";
+
+/**
+ * 模块名称 I18N 国际化键，优先级低于label()
+ * @return 国际化键名
+ */
+String labelKey() default "";
 
 /**
  * 是否显示分页，默认为true
@@ -351,6 +399,12 @@ boolean multipart() default false;
 String label() default "";
 
 /**
+ * 条件说明 I18N 国际化键，优先级低于label()
+ * @return 国际化键名
+ */
+String labelKey() default "";
+
+/**
  * Criteria 条件类属性名，默认为属性名
  * @return 条件属性名
  */
@@ -429,6 +483,12 @@ boolean like() default false;
 String label() default "";
 
 /**
+ * 名称 I18N 国际化键，优先级低于label()
+ * @return 国际化键名
+ */
+String labelKey() default "";
+
+/**
  * 是否显示在列表，默认显示
  * @return 是否在数据网格中显示该字段
  */
@@ -477,6 +537,16 @@ String inputClass() default "easyui-textbox";
 String mybatisColumn() default "";
 ```
 
+## I18N 国际化支持
+
+`@EasyModule`, `@EasyCriteria`, `@EasyField` 可以使用 `labelKey` 属性代替 `label`，指定国际化键。例如
+
+```JAVA
+@EasyField(
+//			label = "邮箱", 
+			labelKey="basic.mail")
+private String email;
+```
 
 
 
