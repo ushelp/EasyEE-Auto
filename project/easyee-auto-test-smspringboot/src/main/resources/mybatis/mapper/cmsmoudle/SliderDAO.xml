@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.easyproject.easyee.sm.cmsmoudle.dao.SliderDAO">
+	<resultMap type="Slider" id="SliderMap">
+		<!-- mapping -->
+		<result column="ID" property="id"/>		
+		<result column="URL" property="url"/>		
+		<result column="SORT" property="sort"/>		
+	</resultMap>
+
+	<select id="findAll" resultMap="SliderMap">
+		select * from web_slider
+	</select>
+	
+	<select id="get" resultMap="SliderMap">
+		select * from web_slider where where id=#{id}
+	</select>
+	
+	<insert id="save">
+		insert into web_slider
+			(ID,URL,SORT) 
+		values
+			(#{id},#{url},#{sort})
+	</insert>
+	
+	<insert id="update">
+		update web_slider 
+		set 
+		ID=#{id},URL=#{url},SORT=#{sort}
+		where id=#{id}
+	</insert>
+	
+	
+	<delete id="delete">
+		delete from web_slider where id=#{id}
+	</delete>
+	
+	<delete id="deleteByIds">
+		delete from web_slider 
+		 WHERE id in
+		  <foreach item="item" index="index" collection="array"
+		      open="(" separator="," close=")">
+		       #{item}
+		  </foreach>
+	</delete>
+	
+	<select id="pagination" resultMap="SliderMap">
+		${autoSQL}
+	</select>
+
+	<select id="findMaxRow" resultType="int">
+		select count(*) from web_slider
+	</select>
+	
+</mapper>

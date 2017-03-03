@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.easyproject.easyee.sm.cmsmoudle.dao.MenuDAO">
+	<resultMap type="Menu" id="MenuMap">
+		<!-- mapping -->
+		<result column="ID" property="id"/>		
+		<result column="M1" property="m1"/>		
+		<result column="M2" property="m2"/>		
+		<result column="M3" property="m3"/>		
+		<result column="M4" property="m4"/>		
+		<result column="M5" property="m5"/>		
+		<result column="M6" property="m6"/>		
+		<result column="M7" property="m7"/>		
+	</resultMap>
+
+	<select id="findAll" resultMap="MenuMap">
+		select * from web_menu
+	</select>
+	
+	<select id="get" resultMap="MenuMap">
+		select * from web_menu where where id=#{id}
+	</select>
+	
+	<insert id="save">
+		insert into web_menu
+			(ID,M1,M2,M3,M4,M5,M6,M7) 
+		values
+			(#{id},#{m1},#{m2},#{m3},#{m4},#{m5},#{m6},#{m7})
+	</insert>
+	
+	<insert id="update">
+		update web_menu 
+		set 
+		ID=#{id},M1=#{m1},M2=#{m2},M3=#{m3},M4=#{m4},M5=#{m5},M6=#{m6},M7=#{m7}
+		where id=#{id}
+	</insert>
+	
+	
+	<delete id="delete">
+		delete from web_menu where id=#{id}
+	</delete>
+	
+	<delete id="deleteByIds">
+		delete from web_menu 
+		 WHERE id in
+		  <foreach item="item" index="index" collection="array"
+		      open="(" separator="," close=")">
+		       #{item}
+		  </foreach>
+	</delete>
+	
+	<select id="pagination" resultMap="MenuMap">
+		${autoSQL}
+	</select>
+
+	<select id="findMaxRow" resultType="int">
+		select count(*) from web_menu
+	</select>
+	
+</mapper>

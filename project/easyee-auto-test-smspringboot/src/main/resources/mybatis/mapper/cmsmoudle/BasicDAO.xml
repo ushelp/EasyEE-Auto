@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.easyproject.easyee.sm.cmsmoudle.dao.BasicDAO">
+	<resultMap type="Basic" id="BasicMap">
+		<!-- mapping -->
+		<result column="ID" property="id"/>		
+		<result column="EMAIL" property="email"/>		
+		<result column="QQ" property="qq"/>		
+		<result column="TEL" property="tel"/>		
+		<result column="ADDRESS" property="address"/>		
+		<result column="WEIBO" property="weibo"/>		
+		<result column="COPYRIGHT" property="copyright"/>		
+		<result column="DESCRIPTION" property="description"/>		
+	</resultMap>
+
+	<select id="findAll" resultMap="BasicMap">
+		select * from web_basic
+	</select>
+	
+	<select id="get" resultMap="BasicMap">
+		select * from web_basic where where id=#{id}
+	</select>
+	
+	<insert id="save">
+		insert into web_basic
+			(ID,EMAIL,QQ,TEL,ADDRESS,WEIBO,COPYRIGHT,DESCRIPTION) 
+		values
+			(#{id},#{email},#{qq},#{tel},#{address},#{weibo},#{copyright},#{description})
+	</insert>
+	
+	<insert id="update">
+		update web_basic 
+		set 
+		ID=#{id},EMAIL=#{email},QQ=#{qq},TEL=#{tel},ADDRESS=#{address},WEIBO=#{weibo},COPYRIGHT=#{copyright},DESCRIPTION=#{description}
+		where id=#{id}
+	</insert>
+	
+	
+	<delete id="delete">
+		delete from web_basic where id=#{id}
+	</delete>
+	
+	<delete id="deleteByIds">
+		delete from web_basic 
+		 WHERE id in
+		  <foreach item="item" index="index" collection="array"
+		      open="(" separator="," close=")">
+		       #{item}
+		  </foreach>
+	</delete>
+	
+	<select id="pagination" resultMap="BasicMap">
+		${autoSQL}
+	</select>
+
+	<select id="findMaxRow" resultType="int">
+		select count(*) from web_basic
+	</select>
+	
+</mapper>
