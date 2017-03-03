@@ -30,7 +30,7 @@ Provides code and view generation for five types of projects.
 <dependency>
   <groupId>cn.easyproject</groupId>
   <artifactId>easyee-auto</artifactId>
-  <version>1.3.1-RELEASE</version>
+  <version>1.3.2-RELEASE</version>
 </dependency>
 ```
 
