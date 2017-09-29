@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>D:\workspace-sts-3.8.1.RELEASE\easyee-auto\github\doc\.readme_en.md.html</title>
+<title>D:\workspace\workspace-sts-3.8.4.RELEASE\easyee-auto\github\doc\.readme_en.md.html</title>
 
 
 <style type="text/css">
@@ -640,23 +640,23 @@ function setDocumentScrollTop(ypos)
 </head>
 <body class="markdown-body">
 <h1> <a id="easyee-auto-manual" class="anchor" href="#easyee-auto-manual" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EasyEE Auto Manual</h1> 
-<p>EasyEE Auto is an automated code generator for the <a href="https://github.com/ushelp/EasyEE">EasyEE Open Source JavaEE Enterprise Rapid Development Platform</a>. Based on the entity rules configuration, can be a key to quickly generate a direct working model, controller, view code.</p> 
-<p>Least version: <code>1.3.2-RELEASE</code> (<code>EasyEE 4.2.X</code>)</p> 
+<p>EasyEE Auto is an automated code generator for the [EasyEE Open Source JavaEE Enterprise Rapid Development Platform] (<a href="https://github.com/ushelp/EasyEE">https://github.com/ushelp/EasyEE</a>). Based on the entity rules configuration, can be a key to quickly generate a direct working model, controller, view code.</p> 
+<p>Least version: <code>1.3.3-RELEASE</code> (<code>EasyEE 4.2.X</code>)</p> 
 <h2> <a id="code-generator-support" class="anchor" href="#code-generator-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Generator Support</h2> 
 <p>Provides code and view generation for five types of projects.</p> 
 <ul> 
- <li><p><strong>EasyEE-SH-SpringBoot</strong>: <code>Spring Boot</code> + <code>Hibernate(JPA)</code></p></li> 
- <li><p><strong>EasyEE-SM-SpringBoot</strong>: <code>Spring Boot</code> + <code>MyBatis</code></p></li> 
- <li><p><strong>EasyEE-SSH</strong>: <code>Spring</code> + <code>Struts2</code> + <code>Hibernate(JPA)</code></p></li> 
- <li><p><strong>EasyEE-SH</strong>: <code>SpringMVC</code> + <code>Hibernate(JPA)</code></p></li> 
- <li><p><strong>EasyEE-SM</strong>: <code>SpringMVC</code> + <code>MyBatis</code></p></li> 
+ <li> <p><strong>EasyEE-SH-SpringBoot</strong>: <code>Spring Boot</code> + <code>Hibernate(JPA)</code></p> </li> 
+ <li> <p><strong>EasyEE-SM-SpringBoot</strong>: <code>Spring Boot</code> + <code>MyBatis</code></p> </li> 
+ <li> <p><strong>EasyEE-SSH</strong>: <code>Spring</code> + <code>Struts2</code> + <code>Hibernate(JPA)</code></p> </li> 
+ <li> <p><strong>EasyEE-SH</strong>: <code>SpringMVC</code> + <code>Hibernate(JPA)</code></p> </li> 
+ <li> <p><strong>EasyEE-SM</strong>: <code>SpringMVC</code> + <code>MyBatis</code></p> </li> 
 </ul> 
 <h2> <a id="maven" class="anchor" href="#maven" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Maven</h2> 
 <div class="highlight highlight-text-xml">
  <pre>&lt;<span class="pl-ent">dependency</span>&gt;
   &lt;<span class="pl-ent">groupId</span>&gt;cn.easyproject&lt;/<span class="pl-ent">groupId</span>&gt;
   &lt;<span class="pl-ent">artifactId</span>&gt;easyee-auto&lt;/<span class="pl-ent">artifactId</span>&gt;
-  &lt;<span class="pl-ent">version</span>&gt;1.3.2-RELEASE&lt;/<span class="pl-ent">version</span>&gt;
+  &lt;<span class="pl-ent">version</span>&gt;1.3.3-RELEASE&lt;/<span class="pl-ent">version</span>&gt;
 &lt;/<span class="pl-ent">dependency</span>&gt;</pre>
 </div> 
 <h2> <a id="steps-for-usage" class="anchor" href="#steps-for-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Steps for usage</h2> 
@@ -666,57 +666,57 @@ function setDocumentScrollTop(ypos)
 <p><code>&lt;&gt;</code>: Automatic generated</p> 
 <p><code>[]</code>: Optional generated</p> 
 <pre><code>cn.easyproject.easyee.xxx
-    yourmodule
-        entity
-        &lt;controller/action&gt;
-        &lt;criteria&gt;
-        &lt;service&gt;
-        [&lt;dao&gt;]
+	yourmodule
+		entity
+		&lt;controller/action&gt;
+		&lt;criteria&gt;
+		&lt;service&gt;
+		[&lt;dao&gt;]
 </code></pre> 
 <h3> <a id="2-annotation-entities-specify-the-generation-rules" class="anchor" href="#2-annotation-entities-specify-the-generation-rules" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Annotation entities, specify the generation rules</h3> 
 <p>Write entities, annotate entities, and configure generation rules.</p> 
 <ul> 
  <li> <p>Class annotation:</p> 
   <div class="highlight highlight-source-java">
-   <pre><span class="pl-k">@EasyModule</span>
-<span class="pl-k">@EasyPage</span>
-<span class="pl-k">@EasyAddDialog</span>
-<span class="pl-k">@EasyEditDialog</span>
-<span class="pl-k">@EasyCriterias</span><span class="pl-k">/</span><span class="pl-k">@EasyCriteria</span></pre>
+   <pre> <span class="pl-k">@EasyModule</span>
+ <span class="pl-k">@EasyPage</span>
+ <span class="pl-k">@EasyAddDialog</span>
+ <span class="pl-k">@EasyEditDialog</span>
+ <span class="pl-k">@EasyCriterias</span><span class="pl-k">/</span><span class="pl-k">@EasyCriteria</span></pre>
   </div> </li> 
  <li> <p>Field annotation:</p> 
   <div class="highlight highlight-source-java">
-   <pre><span class="pl-k">@EasyId</span>
-<span class="pl-k">@EasyField</span>
-<span class="pl-k">@EasyCriteria</span></pre>
+   <pre> <span class="pl-k">@EasyId</span>
+ <span class="pl-k">@EasyField</span>
+ <span class="pl-k">@EasyCriteria</span></pre>
   </div> </li> 
  <li> <p>Example</p> 
   <div class="highlight highlight-source-java">
-   <pre><span class="pl-k">@EasyModule</span>(<span class="pl-c1">label</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>Website info<span class="pl-pds">&quot;</span></span>,<span class="pl-c1">mybatisTable</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>web_basic<span class="pl-pds">&quot;</span></span>)
-<span class="pl-k">@EasyPage</span> <span class="pl-c"><span class="pl-c">//</span> PageType, default is PageType.NONE</span>
-<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Basic</span> {
-
-    <span class="pl-k">@EasyId</span> <span class="pl-c"><span class="pl-c">//</span> Object Id(Primary key), **required**</span>
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">show</span> <span class="pl-k">=</span> <span class="pl-c1">false</span>, <span class="pl-c1">inputShow</span><span class="pl-k">=</span><span class="pl-c1">false</span>) <span class="pl-c"><span class="pl-c">//</span> Field information is not displayed when querying and entering</span>
-    <span class="pl-k">private</span> <span class="pl-k">int</span> id;
-
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Email<span class="pl-pds">&quot;</span></span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> email;
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>QQ<span class="pl-pds">&quot;</span></span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> qq;
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Telphone<span class="pl-pds">&quot;</span></span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> tel;
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Company Address<span class="pl-pds">&quot;</span></span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> address;
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Weibo<span class="pl-pds">&quot;</span></span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> weibo;
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Copyright<span class="pl-pds">&quot;</span></span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> copyright;
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Description<span class="pl-pds">&quot;</span></span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> description;
-
-    <span class="pl-c"><span class="pl-c">//</span> setters&amp;getters...   </span>
-}</pre>
+   <pre> <span class="pl-k">@EasyModule</span>(<span class="pl-c1">label</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>Website info<span class="pl-pds">&quot;</span></span>,<span class="pl-c1">mybatisTable</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>web_basic<span class="pl-pds">&quot;</span></span>)
+ <span class="pl-k">@EasyPage</span> <span class="pl-c"><span class="pl-c">//</span> PageType, default is PageType.NONE</span>
+ <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Basic</span> {
+ 	
+ 	<span class="pl-k">@EasyId</span> <span class="pl-c"><span class="pl-c">//</span> Object Id(Primary key), **required**</span>
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">show</span> <span class="pl-k">=</span> <span class="pl-c1">false</span>, <span class="pl-c1">inputShow</span><span class="pl-k">=</span><span class="pl-c1">false</span>) <span class="pl-c"><span class="pl-c">//</span> Field information is not displayed when querying and entering</span>
+ 	<span class="pl-k">private</span> <span class="pl-k">int</span> id;
+ 	
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Email<span class="pl-pds">&quot;</span></span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> email;
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>QQ<span class="pl-pds">&quot;</span></span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> qq;
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Telphone<span class="pl-pds">&quot;</span></span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> tel;
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Company Address<span class="pl-pds">&quot;</span></span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> address;
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Weibo<span class="pl-pds">&quot;</span></span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> weibo;
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Copyright<span class="pl-pds">&quot;</span></span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> copyright;
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Description<span class="pl-pds">&quot;</span></span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> description;
+ 
+ 	<span class="pl-c"><span class="pl-c">//</span> setters&amp;getters...	</span>
+ }</pre>
   </div> </li> 
 </ul> 
 <h3> <a id="3-code-generation" class="anchor" href="#3-code-generation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Code generation</h3> 
@@ -725,75 +725,75 @@ function setDocumentScrollTop(ypos)
  <li> <p>Generator</p> <p><code>SHSpringBootCodeGenerator.java</code>: <strong>Spring Boot + Hibernate(JPA)</strong></p> <p><code>SMSpringBootCodeGenerator.java</code>: <strong>Spring Boot + MyBatis</strong></p> <p><code>SHCodeGenerator.java</code>: <strong>SpringMVC + Hibernate(JPA)</strong></p> <p><code>SMCodeGenerator.java</code>: <strong>SpringMVC + MyBatis</strong></p> <p><code>SSHCodeGenerator.java</code>: <strong>Spring + Struts2 + Hibernate(JPA)</strong></p> </li> 
  <li> <p>Method</p> 
   <div class="highlight highlight-source-java">
-   <pre><span class="pl-c"><span class="pl-c">//</span> Generate all the classes under the entity package</span>
-generator(<span class="pl-smi">String</span> entityPackage)
-<span class="pl-c"><span class="pl-c">//</span> Choice modules to generate</span>
-generator(<span class="pl-k">EasyAutoModule</span>[] modules, <span class="pl-smi">String</span> entityPackage)
-
-<span class="pl-c"><span class="pl-c">//</span> Generates the specified class</span>
-generator(<span class="pl-smi">Class</span><span class="pl-k">.</span><span class="pl-c1">..</span> entity)
-<span class="pl-c"><span class="pl-c">//</span> Choice modules to generate</span>
-generator(<span class="pl-k">EasyAutoModule</span>[] modules, <span class="pl-smi">Class</span><span class="pl-k">.</span><span class="pl-c1">..</span> entity)</pre>
+   <pre> <span class="pl-c"><span class="pl-c">//</span> Generate all the classes under the entity package</span>
+ generator(<span class="pl-smi">String</span> entityPackage)
+ <span class="pl-c"><span class="pl-c">//</span> Choice modules to generate</span>
+ generator(<span class="pl-k">EasyAutoModule</span>[] modules, <span class="pl-smi">String</span> entityPackage)
+ 
+ <span class="pl-c"><span class="pl-c">//</span> Generates the specified class</span>
+ generator(<span class="pl-smi">Class</span><span class="pl-k">.</span><span class="pl-c1">..</span> entity)
+ <span class="pl-c"><span class="pl-c">//</span> Choice modules to generate</span>
+ generator(<span class="pl-k">EasyAutoModule</span>[] modules, <span class="pl-smi">Class</span><span class="pl-k">.</span><span class="pl-c1">..</span> entity)</pre>
   </div> </li> 
  <li> <p>Example</p> 
   <div class="highlight highlight-source-java">
-   <pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Code</span> {
-    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
-        <span class="pl-c"><span class="pl-c">//</span> EasyEE Auto </span>
-
-        <span class="pl-c"><span class="pl-c">//</span> Generate all the classes under the entity package</span>
-        <span class="pl-smi">String</span> entityPackage<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>cn.easyproject.easyee.ssh.cms.entity<span class="pl-pds">&quot;</span></span>;
-        <span class="pl-k">new</span> <span class="pl-smi">SHCodeGenerator</span>()<span class="pl-k">.</span>generator(entityPackage);
-
-        <span class="pl-c"><span class="pl-c">//</span> Generates the specified class</span>
-<span class="pl-c"><span class="pl-c">//</span>      new SHCodeGenerator().generator(Basic.class);</span>
-
-        <span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">&quot;</span>Generator work done.<span class="pl-pds">&quot;</span></span>);
-
-    }
-}</pre>
+   <pre> <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Code</span> {
+ 	<span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+ 		<span class="pl-c"><span class="pl-c">//</span> EasyEE Auto </span>
+ 		
+ 		<span class="pl-c"><span class="pl-c">//</span> Generate all the classes under the entity package</span>
+ 		<span class="pl-smi">String</span> entityPackage<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>cn.easyproject.easyee.ssh.cms.entity<span class="pl-pds">&quot;</span></span>;
+ 		<span class="pl-k">new</span> <span class="pl-smi">SHCodeGenerator</span>()<span class="pl-k">.</span>generator(entityPackage);
+ 		
+ 		<span class="pl-c"><span class="pl-c">//</span> Generates the specified class</span>
+ <span class="pl-c"><span class="pl-c">//</span>		new SHCodeGenerator().generator(Basic.class);</span>
+ 		
+ 		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">&quot;</span>Generator work done.<span class="pl-pds">&quot;</span></span>);
+ 		
+ 	}
+ }</pre>
   </div> </li> 
  <li> <p>Generating Module Selection:</p> <p>You can specify the modules that are generated by enumerating the arrays.</p> 
   <div class="highlight highlight-source-java">
-   <pre><span class="pl-c"><span class="pl-c">//</span> Generator all modules, you can choice</span>
-<span class="pl-k">new</span> <span class="pl-smi">SMCodeGenerator</span>()<span class="pl-k">.</span>generator(<span class="pl-k">new</span> <span class="pl-smi">EasyAutoModule</span>[]{
-            <span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>CONTROLLER_CLASS</span>, <span class="pl-c"><span class="pl-c">//</span> Controller/Action 控制器类</span>
-            <span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>CRITERIA_CLASS</span>, <span class="pl-c"><span class="pl-c">//</span> Criteria</span>
-            <span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>MYBATIS_DAO_INTERFACE</span>, <span class="pl-c"><span class="pl-c">//</span> MyBatis DAO interface</span>
-            <span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>MYBATIS_MAPPER_XML</span>, <span class="pl-c"><span class="pl-c">//</span> MyBatis mapper.xml</span>
-            <span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>PAGE</span>, <span class="pl-c"><span class="pl-c">//</span> View page</span>
-            <span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>SERVICE_INTERFACE</span>, <span class="pl-c"><span class="pl-c">//</span> Service interface</span>
-            <span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>SERVICE_IMPLEMENTS</span> <span class="pl-c"><span class="pl-c">//</span> Server implements</span>
-    },entityPackage);</pre>
+   <pre> <span class="pl-c"><span class="pl-c">//</span> Generator all modules, you can choice</span>
+ <span class="pl-k">new</span> <span class="pl-smi">SMCodeGenerator</span>()<span class="pl-k">.</span>generator(<span class="pl-k">new</span> <span class="pl-smi">EasyAutoModule</span>[]{
+ 			<span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>CONTROLLER_CLASS</span>, <span class="pl-c"><span class="pl-c">//</span> Controller/Action 控制器类</span>
+ 			<span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>CRITERIA_CLASS</span>, <span class="pl-c"><span class="pl-c">//</span> Criteria</span>
+ 			<span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>MYBATIS_DAO_INTERFACE</span>, <span class="pl-c"><span class="pl-c">//</span> MyBatis DAO interface</span>
+ 			<span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>MYBATIS_MAPPER_XML</span>, <span class="pl-c"><span class="pl-c">//</span> MyBatis mapper.xml</span>
+ 			<span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>PAGE</span>, <span class="pl-c"><span class="pl-c">//</span> View page</span>
+ 			<span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>SERVICE_INTERFACE</span>, <span class="pl-c"><span class="pl-c">//</span> Service interface</span>
+ 			<span class="pl-smi">EasyAutoModule</span><span class="pl-c1"><span class="pl-k">.</span>SERVICE_IMPLEMENTS</span> <span class="pl-c"><span class="pl-c">//</span> Server implements</span>
+ 	},entityPackage);</pre>
   </div> </li> 
 </ul> 
 <h3> <a id="3-configure-permissions" class="anchor" href="#3-configure-permissions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Configure permissions</h3> 
 <p>Code generation completes automatically by outputting <code>menu permissions (#)</code> and <code>operation rights (-)</code> which need to be configured. Use the administrator login system, on-demand configuration can be assigned permissions.</p> 
 <ul> 
- <li> <p>Output Example</p> <pre><code>需要配置的权限列表/Need permission list
-`#` Menu permissions
-`-` Operation permissions
-# Basic/page
-     - Basic/list
-     - Basic/get
-     - Basic/save
-     - Basic/update
-     - Basic/delete
-     - Basic/deleteCascade
-# Menu/page
-     - Menu/list
-     - Menu/get
-     - Menu/save
-     - Menu/update
-     - Menu/delete
-     - Menu/deleteCascade
-# Slider/page
-     - Slider/list
-     - Slider/get
-     - Slider/save
-     - Slider/update
-     - Slider/delete
-     - Slider/deleteCascade
+ <li> <p>Output Example</p> <pre><code> 需要配置的权限列表/Need permission list
+ `#` Menu permissions
+ `-` Operation permissions
+ # Basic/page
+ 	 - Basic/list
+ 	 - Basic/get
+ 	 - Basic/save
+ 	 - Basic/update
+ 	 - Basic/delete
+ 	 - Basic/deleteCascade
+ # Menu/page
+ 	 - Menu/list
+ 	 - Menu/get
+ 	 - Menu/save
+ 	 - Menu/update
+ 	 - Menu/delete
+ 	 - Menu/deleteCascade
+ # Slider/page
+ 	 - Slider/list
+ 	 - Slider/get
+ 	 - Slider/save
+ 	 - Slider/update
+ 	 - Slider/delete
+ 	 - Slider/deleteCascade
 </code></pre> </li> 
 </ul> 
 <h3> <a id="4-running-on-demand-adjustment" class="anchor" href="#4-running-on-demand-adjustment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Running, on-demand adjustment</h3> 
@@ -881,25 +881,25 @@ generator(<span class="pl-k">EasyAutoModule</span>[] modules, <span class="pl-sm
 <h5> <a id="pagetype" class="anchor" href="#pagetype" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PageType</h5> 
 <div class="highlight highlight-source-java">
  <pre><span class="pl-k">public</span> <span class="pl-k">enum</span> <span class="pl-en">PageType</span> {
-    <span class="pl-c"><span class="pl-c">/*</span>*</span>
-<span class="pl-c">     * 无需直接编辑，默认方式</span>
-<span class="pl-c">     * 自动添加以下类注解</span>
-<span class="pl-c">     * @EasyAddDialog</span>
-<span class="pl-c">     * @EasyEditDialog</span>
-<span class="pl-c">     <span class="pl-c">*/</span></span>
-    <span class="pl-c1">NONE</span>,
-    <span class="pl-c"><span class="pl-c">/*</span>*</span>
-<span class="pl-c">     * 行编辑模式</span>
-<span class="pl-c">     <span class="pl-c">*/</span></span>
-    <span class="pl-c1">ROW_EDIT</span>,
-    <span class="pl-c"><span class="pl-c">/*</span>*</span>
-<span class="pl-c">     * 列编辑模式</span>
-<span class="pl-c">     <span class="pl-c">*/</span></span>
-    <span class="pl-c1">CELL_EDIT</span>,
-    <span class="pl-c"><span class="pl-c">/*</span>*</span>
-<span class="pl-c">     * 表单编辑模式，单行数据</span>
-<span class="pl-c">     <span class="pl-c">*/</span></span>
-    <span class="pl-c1">FORM_EDIT</span>;
+	<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c">	 * 无需直接编辑，默认方式</span>
+<span class="pl-c">	 * 自动添加以下类注解</span>
+<span class="pl-c">	 * @EasyAddDialog</span>
+<span class="pl-c">	 * @EasyEditDialog</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	<span class="pl-c1">NONE</span>,
+	<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c">	 * 行编辑模式</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	<span class="pl-c1">ROW_EDIT</span>,
+	<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c">	 * 列编辑模式</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	<span class="pl-c1">CELL_EDIT</span>,
+	<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c">	 * 表单编辑模式，单行数据</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	<span class="pl-c1">FORM_EDIT</span>;
 }</pre>
 </div> 
 <ul> 
@@ -970,34 +970,34 @@ generator(<span class="pl-k">EasyAutoModule</span>[] modules, <span class="pl-sm
 <ul> 
  <li> <p>Example</p> 
   <div class="highlight highlight-source-java">
-   <pre><span class="pl-c"><span class="pl-c">//</span> 自定义条件字段</span>
-<span class="pl-k">@EasyCriterias</span>({
-    <span class="pl-c"><span class="pl-c">//</span> label 条件显示的名称, filed Criteria 条件类属性名，queryConditionName sql/hql 查询条件名，type</span>
-    <span class="pl-c"><span class="pl-c">//</span> 条件属性数据类型，like 是否模糊查询</span>
-    <span class="pl-k">@EasyCriteria</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>部门<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">filed</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>deptno<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">queryConditionName</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.deptno<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">type</span> <span class="pl-k">=</span> <span class="pl-smi">Integer</span><span class="pl-k">.</span>class) 
-})
-<span class="pl-k">@EasyModule</span>(<span class="pl-c1">label</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>员工<span class="pl-pds">&quot;</span></span>)
-<span class="pl-k">@EasyPage</span>
-<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Emp</span> <span class="pl-k">implements</span> <span class="pl-e">java.io<span class="pl-k">.</span>Serializable</span> {
-
-    <span class="pl-k">@EasyId</span> <span class="pl-c"><span class="pl-c">//</span> 主键字段，**必须**</span>
-    <span class="pl-k">@EasyCriteria</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>员工编号<span class="pl-pds">&quot;</span></span>) <span class="pl-c"><span class="pl-c">//</span> 条件字段信息</span>
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">show</span> <span class="pl-k">=</span> <span class="pl-c1">false</span>, <span class="pl-c1">inputShow</span><span class="pl-k">=</span><span class="pl-c1">false</span>) <span class="pl-c"><span class="pl-c">//</span> 查询和输入时不显示字段信息</span>
-    <span class="pl-k">private</span> <span class="pl-smi">Integer</span> empno;
-
-    <span class="pl-k">@EasyCriteria</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>员工姓名<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">like</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>) <span class="pl-c"><span class="pl-c">//</span> 条件字段，模糊查询</span>
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>员工姓名<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">inputRequired</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> ename;
-
-    <span class="pl-k">@EasyCriteria</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>职务<span class="pl-pds">&quot;</span></span>) <span class="pl-c"><span class="pl-c">//</span> 条件字段</span>
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>职务<span class="pl-pds">&quot;</span></span>)
-    <span class="pl-k">private</span> <span class="pl-smi">String</span> job;
-
-    <span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>部门<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">field</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.dname<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">inputField</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.deptno<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">inputRequired</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>)
-    <span class="pl-k">private</span> <span class="pl-smi">Dept</span> dept;
-
-    <span class="pl-c"><span class="pl-c">//</span>....</span>
-}</pre>
+   <pre> <span class="pl-c"><span class="pl-c">//</span> 自定义条件字段</span>
+ <span class="pl-k">@EasyCriterias</span>({
+ 	<span class="pl-c"><span class="pl-c">//</span> label 条件显示的名称, filed Criteria 条件类属性名，queryConditionName sql/hql 查询条件名，type</span>
+ 	<span class="pl-c"><span class="pl-c">//</span> 条件属性数据类型，like 是否模糊查询</span>
+ 	<span class="pl-k">@EasyCriteria</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>部门<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">filed</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>deptno<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">queryConditionName</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.deptno<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">type</span> <span class="pl-k">=</span> <span class="pl-smi">Integer</span><span class="pl-k">.</span>class) 
+ })
+ <span class="pl-k">@EasyModule</span>(<span class="pl-c1">label</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>员工<span class="pl-pds">&quot;</span></span>)
+ <span class="pl-k">@EasyPage</span>
+ <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Emp</span> <span class="pl-k">implements</span> <span class="pl-e">java.io<span class="pl-k">.</span>Serializable</span> {
+ 
+ 	<span class="pl-k">@EasyId</span> <span class="pl-c"><span class="pl-c">//</span> 主键字段，**必须**</span>
+ 	<span class="pl-k">@EasyCriteria</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>员工编号<span class="pl-pds">&quot;</span></span>) <span class="pl-c"><span class="pl-c">//</span> 条件字段信息</span>
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">show</span> <span class="pl-k">=</span> <span class="pl-c1">false</span>, <span class="pl-c1">inputShow</span><span class="pl-k">=</span><span class="pl-c1">false</span>) <span class="pl-c"><span class="pl-c">//</span> 查询和输入时不显示字段信息</span>
+ 	<span class="pl-k">private</span> <span class="pl-smi">Integer</span> empno;
+ 
+ 	<span class="pl-k">@EasyCriteria</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>员工姓名<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">like</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>) <span class="pl-c"><span class="pl-c">//</span> 条件字段，模糊查询</span>
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>员工姓名<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">inputRequired</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> ename;
+ 
+ 	<span class="pl-k">@EasyCriteria</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>职务<span class="pl-pds">&quot;</span></span>) <span class="pl-c"><span class="pl-c">//</span> 条件字段</span>
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>职务<span class="pl-pds">&quot;</span></span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">String</span> job;
+ 
+ 	<span class="pl-k">@EasyField</span>(<span class="pl-c1">label</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>部门<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">field</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.dname<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">inputField</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.deptno<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">inputRequired</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>)
+ 	<span class="pl-k">private</span> <span class="pl-smi">Dept</span> dept;
+ 
+ 	<span class="pl-c"><span class="pl-c">//</span>....</span>
+ }</pre>
   </div> </li> 
 </ul> 
 <h3> <a id="字段注解" class="anchor" href="#%E5%AD%97%E6%AE%B5%E6%B3%A8%E8%A7%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>字段注解</h3> 
@@ -1071,8 +1071,8 @@ generator(<span class="pl-k">EasyAutoModule</span>[] modules, <span class="pl-sm
 <p><code>@EasyModule</code>, <code>@EasyCriteria</code>, <code>@EasyField</code> can use <code>labelKey</code> instead of <code>label</code>, set i18n key.</p> 
 <div class="highlight highlight-source-java">
  <pre><span class="pl-k">@EasyField</span>(
-<span class="pl-c"><span class="pl-c">//</span>          label = &quot;邮箱&quot;, </span>
-            <span class="pl-c1">labelKey</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>basic.mail<span class="pl-pds">&quot;</span></span>)
+<span class="pl-c"><span class="pl-c">//</span>			label = &quot;邮箱&quot;, </span>
+			<span class="pl-c1">labelKey</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>basic.mail<span class="pl-pds">&quot;</span></span>)
 <span class="pl-k">private</span> <span class="pl-smi">String</span> email;</pre>
 </div> 
 <h2> <a id="end" class="anchor" href="#end" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>END</h2> 

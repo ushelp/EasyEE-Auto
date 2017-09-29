@@ -116,9 +116,9 @@
 		<#if update>
 		// Click button to edit
 		${ClassName}.toEdit = function() {
-			var row = $("#${ClassName}DataGrid").datagrid('getSelected');
+			var rows = $("#${ClassName}DataGrid").datagrid('getSelected');
 			if (rows && rows.length && rows.length>0) {
-				toEdit(row);
+				toEdit(rows);
 			} else {
 				uiEx.msg("<s:message code="msg.choiceEditRow"></s:message>");
 			}
