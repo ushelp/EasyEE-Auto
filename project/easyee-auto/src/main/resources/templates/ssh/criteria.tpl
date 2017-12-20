@@ -49,8 +49,8 @@ public class ${ClassName}Criteria extends EasyCriteria implements java.io.Serial
 		
 		/*
 		if (StringUtils.isNotNullAndEmpty(this.getName())) {
-			condition.append(" and name like ?");
-			values.add("%" + this.getName() + "%");
+			condition.append(" and name like :name");
+			values.put("name", "%" + this.getName() + "%");
 		}
 		*/
 		
@@ -59,13 +59,13 @@ public class ${ClassName}Criteria extends EasyCriteria implements java.io.Serial
 		<#assign info=item?split("#")>
 		<#if info[3]=="like">
 		if(StringUtils.isNotNullAndEmpty(this.get${info[1]?cap_first}())){
-			condition.append(" and ${info[2]} like ?");
-			values.add("%"+this.get${info[1]?cap_first}()+"%");
+			condition.append(" and ${info[2]} like :${info[2]}");
+			values.put("${info[2]}", "%"+this.get${info[1]?cap_first}()+"%");
 		}
 		<#else>
 		if(StringUtils.isNotNullAndEmpty(this.get${info[1]?cap_first}())){
-			condition.append(" and ${info[2]}=?");
-			values.add(this.get${info[1]?cap_first}());
+			condition.append(" and ${info[2]}=:${info[2]}");
+			values.put("${info[2]}", this.get${info[1]?cap_first}());
 		}
 		</#if>
 		</#list>
