@@ -17,7 +17,7 @@
 		
 		<spring.version>4.3.4.RELEASE</spring.version>
 		<springboot.version>1.4.2.RELEASE</springboot.version>
-		<mybatis.version>3.4.1</mybatis.version>
+		<mybatis.version>3.5.6</mybatis.version>
 		<org.mybatis.spring.boot.version>1.1.1</org.mybatis.spring.boot.version>
 		<mysql.version>5.1.34</mysql.version>
 		<oracle.version>11.2.0.4</oracle.version>
